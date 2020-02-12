@@ -38,12 +38,13 @@ def list_of_directors(source)
   list
 end
 
+#uses directors_totals and list_of_directors
 def total_gross(source)
   total = 0
   i = 0
 
   while i < list_of_directors(source).count do
-    total += gross_for_director[list_of_directors]
+    total += directors_totals[list_of_directors[i]]
     i += 1
   end
 
