@@ -1,6 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require_relative './directors_database'
 
+# Returns hash { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(source)
   result = {}
   director_index = 0
@@ -12,6 +13,7 @@ def directors_totals(source)
   result
 end
 
+#
 def gross_for_director(d)
   total = 0
   index = 0
@@ -39,5 +41,3 @@ def total_gross(source)
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
 end
-
-
